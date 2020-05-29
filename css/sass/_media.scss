@@ -1,6 +1,42 @@
 // sm 568px
 @media screen and (min-width: 35.5em){
-    
+    header{
+        div{
+            &.box-menu{
+                .menu-hamburguer{
+                    display: none;
+                }
+                nav.menu-nav{
+                    display: flex;
+                    ul li{
+                        display: inline-block;
+                        a{
+                            margin: 0 .5em;
+                            &:hover{
+                                padding-bottom: .5em;
+                                border-bottom: 2px solid $principal-blue;
+                            }
+                        }
+                    }
+                }
+            }
+            &.box-btn{
+                display: flex;
+                a{
+                    &.btn-donar{
+                        padding: .7em 1em;
+                        background: $principal-blue;
+                        border-radius: .5em;
+                        color: $white;
+                        font-weight: 500;
+                        &:hover{
+                            background: $primary;
+                        }
+                    }
+                }
+            }    
+        }
+    }
 }
 
 // md 768px

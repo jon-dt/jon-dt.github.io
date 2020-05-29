@@ -5,7 +5,6 @@ header{
     display: flex;
     justify-content: space-between;
     div{
-        // padding: .5em 1em;
         display: flex;
         align-items: center;
         &.box-logo{
@@ -85,32 +84,10 @@ header{
             }
             nav.menu-nav{
                 display: none;
-                ul li{
-                   display: inline-block;
-                   a{
-                       margin: 0 1em;
-                       &:hover{
-                           padding-bottom: .5em;
-                           border-bottom: 2px solid $principal-blue;
-                       }
-                   }
-               }
             }
         }
         &.box-btn{
             display: none;
-            a{
-                &.btn-donar{
-                    padding: 1em 3em;
-                    background: $principal-blue;
-                    border-radius: .5em;
-                    color: $white;
-                    font-weight: 700;
-                    &:hover{
-                        background: $primary;
-                    }
-                }
-            }
         }
     }
 }
