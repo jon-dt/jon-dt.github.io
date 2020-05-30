@@ -122,6 +122,10 @@ header div.box-btn { display: none; }
 
 .why-lyn .box-beneficios .beneficio .box-text span { font-size: .8em; color: #6c757d; padding: .25em 0; }
 
+.why-lyn .box-contact .social-media a { padding: .5em .25em; }
+
+.why-lyn .box-contact .social-media a img { width: 3.12em; }
+
 @media screen and (min-width: 35.5em) { header div.box-menu .menu-hamburguer { display: none; }
   header div.box-menu nav.menu-nav { display: flex; }
   header div.box-menu nav.menu-nav ul li { display: inline-block; }
@@ -146,6 +150,11 @@ header div.box-btn { display: none; }
   .welcome .box-text .botones .boton .boton-box-text p { padding: 0; font-size: 1em; }
   .welcome .box-text .botones .boton .box-btn { justify-content: left; }
   .welcome .box-text .box-ayuda { margin-top: -2em; }
+  .why-lyn { height: 100vh; }
   .why-lyn .box-description p { text-align: center; }
-  .why-lyn .box-beneficios { display: grid; grid-template-columns: 1fr 1fr 1fr; } }
+  .why-lyn .box-beneficios { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  .why-lyn .box-contact .social-media a { padding: 1em; }
+  .why-lyn .box-contact .social-media a img { width: 5.62em; } }
+
+@media screen and (min-width: 80em) { .welcome { height: calc(100vh - 6.25em); } }
 /*# sourceMappingURL=main.css.map */
