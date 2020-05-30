@@ -1,7 +1,8 @@
 /**** P R O J E C T   C O L O R S ******/
 $white: #fff;
 $principal-blue: rgb(0, 32, 96);
-$gray-test: #eee;
+$lyn-gray: #eee;
+$lyn-pink: #E24EC6;
 /* G E N E R A L   C O L O R S */
 $blue: #007bff;
 $cyan: #17a2b8;
@@ -66,6 +67,18 @@ body{
 .border{
     border: 1px solid red;
 }
+.border-g{
+    border: 1px solid green;
+}
+.border-y{
+    border: 1px solid yellow;
+}
+.border-p{
+    border: 1px solid purple;
+}
+.border-b{
+    border: 1px solid $blue;
+}
 /*******************************************/
 nav ul li{
     list-style: none;
@@ -79,8 +92,37 @@ a{
 img{
     pointer-events: none;
 }
+p{
+    line-height: 1.25em;
+}
 
 /*******************************************/
 header, section{
     padding: .5em 1em;
 }
+
+.box-btn{
+    display: flex;
+    justify-content: center;
+    padding: .5em 0;
+    a{
+        padding: .7em 1em;
+        border-radius: .5em;
+        color: $white;
+        font-weight: 700;
+        width: 11em;
+        height: 2.5em;
+        &.btn-donar{
+            background: $principal-blue;
+            &:hover{
+                background: $primary;
+            }
+        }
+        &.btn-mama{
+            background: $lyn-pink;
+            &:hover{
+                background: $purple;
+            }
+        }
+    }
+} 

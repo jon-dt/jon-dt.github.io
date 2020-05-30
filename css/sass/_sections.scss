@@ -1,6 +1,74 @@
 .welcome{
-    /*padding: 2em 0;*/
-    h1{
-        font-size: 2em;
+    .box-title{
+        h1{
+            font-size: 2em;
+        }
+    }
+    .box-images{
+        .image{
+            justify-content: center;
+            img{
+                margin: 1em 0;
+                width: 100%;
+            }
+        }
+    }
+    .box-text{
+        padding: 0;
+        p{
+            padding: .5em 0;
+        }
+        .botones{
+            padding-bottom: 1em;
+            .boton{
+                padding: 1em;
+            }
+        }
+    }
+    .box-ayuda{
+        p{
+            padding-bottom: 1.5em;
+        }
+    }
+}
+
+.why-lyn{
+    // padding: 1em 0;
+    background: $lyn-gray;
+    .box-title{
+        padding: 1em 0;
+        h1{
+            font-size: 2em;
+        }
+    }
+    .box-description{
+        text-align: left;
+        p{
+            text-align: left;
+            padding: .5em 0;
+            color: $gray;
+        }
+    }
+    .box-beneficios{
+        .beneficio{
+            display: grid;
+            grid-template-columns: 6.5em 1fr;
+            align-items: center;
+            padding: 1.5em 0;
+            .box-text{
+                text-align: left;
+                p{
+                    font-size: .9em;
+                    font-weight: 700;
+                    padding: .25em 0;
+                    text-align: left;
+                }
+                span{
+                    font-size: .8em;
+                    color: $gray;
+                    padding: .25em 0;
+                }
+            }
+        }
     }
 }

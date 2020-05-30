@@ -26,6 +26,14 @@ body { background: #fff; }
 /*******************************************/
 .border { border: 1px solid red; }
 
+.border-g { border: 1px solid green; }
+
+.border-y { border: 1px solid yellow; }
+
+.border-p { border: 1px solid purple; }
+
+.border-b { border: 1px solid #007bff; }
+
 /*******************************************/
 nav ul li { list-style: none; }
 
@@ -33,8 +41,22 @@ a { text-decoration: none; font-size: 1em; }
 
 img { pointer-events: none; }
 
+p { line-height: 1.25em; }
+
 /*******************************************/
 header, section { padding: .5em 1em; }
+
+.box-btn { display: flex; justify-content: center; padding: .5em 0; }
+
+.box-btn a { padding: .7em 1em; border-radius: .5em; color: #fff; font-weight: 700; width: 11em; height: 2.5em; }
+
+.box-btn a.btn-donar { background: #002060; }
+
+.box-btn a.btn-donar:hover { background: #007bff; }
+
+.box-btn a.btn-mama { background: #E24EC6; }
+
+.box-btn a.btn-mama:hover { background: #6f42c1; }
 
 header { /*position: fixed; z-index: 100;*/ width: 100%; display: flex; justify-content: space-between; }
 
@@ -66,9 +88,39 @@ header div.box-menu nav.menu-nav { display: none; }
 
 header div.box-btn { display: none; }
 
-.welcome { /*padding: 2em 0;*/ }
+.welcome .box-title h1 { font-size: 2em; }
 
-.welcome h1 { font-size: 2em; }
+.welcome .box-images .image { justify-content: center; }
+
+.welcome .box-images .image img { margin: 1em 0; width: 100%; }
+
+.welcome .box-text { padding: 0; }
+
+.welcome .box-text p { padding: .5em 0; }
+
+.welcome .box-text .botones { padding-bottom: 1em; }
+
+.welcome .box-text .botones .boton { padding: 1em; }
+
+.welcome .box-ayuda p { padding-bottom: 1.5em; }
+
+.why-lyn { background: #eee; }
+
+.why-lyn .box-title { padding: 1em 0; }
+
+.why-lyn .box-title h1 { font-size: 2em; }
+
+.why-lyn .box-description { text-align: left; }
+
+.why-lyn .box-description p { text-align: left; padding: .5em 0; color: #6c757d; }
+
+.why-lyn .box-beneficios .beneficio { display: grid; grid-template-columns: 6.5em 1fr; align-items: center; padding: 1.5em 0; }
+
+.why-lyn .box-beneficios .beneficio .box-text { text-align: left; }
+
+.why-lyn .box-beneficios .beneficio .box-text p { font-size: .9em; font-weight: 700; padding: .25em 0; text-align: left; }
+
+.why-lyn .box-beneficios .beneficio .box-text span { font-size: .8em; color: #6c757d; padding: .25em 0; }
 
 @media screen and (min-width: 35.5em) { header div.box-menu .menu-hamburguer { display: none; }
   header div.box-menu nav.menu-nav { display: flex; }
@@ -76,6 +128,24 @@ header div.box-btn { display: none; }
   header div.box-menu nav.menu-nav ul li a { margin: 0 .5em; }
   header div.box-menu nav.menu-nav ul li a:hover { padding-bottom: .5em; border-bottom: 2px solid #002060; }
   header div.box-btn { display: flex; }
-  header div.box-btn a.btn-donar { padding: .7em 1em; background: #002060; border-radius: .5em; color: #fff; font-weight: 500; }
-  header div.box-btn a.btn-donar:hover { background: #007bff; } }
+  .welcome .box-images { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1em; align-items: center; }
+  .welcome .box-text .botones { display: grid; grid-template-columns: 1fr 1fr; grid-gap: .5em; padding: 1em 0; }
+  .welcome .box-text .botones .boton .boton-box-text { padding: 0; height: 60px; } }
+
+@media screen and (min-width: 48em) { .why-lyn .box-beneficios { display: grid; grid-template-columns: 1fr 1fr; } }
+
+@media screen and (min-width: 64em) { .welcome { display: grid; grid-template-columns: 34.37em 1fr; }
+  .welcome .box-title { grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end: 1; }
+  .welcome .box-title h1 { font-size: 3em; }
+  .welcome .box-images { grid-column-start: 2; grid-column-end: 2; grid-row-start: 2; grid-row-end: 2; display: grid; }
+  .welcome .box-text { display: block; }
+  .welcome .box-text p { padding: 1em 0; text-align: left; font-size: 1.5em; line-height: 1.5em; }
+  .welcome .box-text .botones { display: block; padding: 1.6em 0 0 0; }
+  .welcome .box-text .botones .boton { padding: 0; padding-bottom: 1.5em; }
+  .welcome .box-text .botones .boton .boton-box-text { height: auto; }
+  .welcome .box-text .botones .boton .boton-box-text p { padding: 0; font-size: 1em; }
+  .welcome .box-text .botones .boton .box-btn { justify-content: left; }
+  .welcome .box-text .box-ayuda { margin-top: -2em; }
+  .why-lyn .box-description p { text-align: center; }
+  .why-lyn .box-beneficios { display: grid; grid-template-columns: 1fr 1fr 1fr; } }
 /*# sourceMappingURL=main.css.map */

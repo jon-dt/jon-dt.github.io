@@ -19,34 +19,109 @@
                         }
                     }
                 }
-            }
+            }  
             &.box-btn{
                 display: flex;
-                a{
-                    &.btn-donar{
-                        padding: .7em 1em;
-                        background: $principal-blue;
-                        border-radius: .5em;
-                        color: $white;
-                        font-weight: 500;
-                        &:hover{
-                            background: $primary;
-                        }
+            } 
+        }
+    }
+    .welcome{
+        .box-images{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+            align-items: center;
+        }
+        .box-text{
+            .botones{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: .5em;
+                padding: 1em 0;
+                .boton{
+                    .boton-box-text{
+                        padding: 0;
+                        height: 60px;
                     }
                 }
-            }    
+            }
         }
     }
 }
 
 // md 768px
 @media screen and (min-width: 48em){
-
+    .why-lyn{
+        .box-beneficios{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }
 
 // lg 1024px
 @media screen and (min-width: 64em){
-
+.welcome{
+    display: grid;
+    grid-template-columns: 34.37em 1fr;
+    .box-title{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        h1{
+            font-size: 3em;
+        }
+    }
+    .box-images{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        display: grid;
+    }
+    .box-text{
+        display: block;
+        p{
+            padding: 1em 0;
+            text-align: left;
+            font-size: 1.5em;
+            line-height: 1.5em;
+        }
+        .botones{
+            display: block;
+            padding: 1.6em 0 0 0;
+            .boton{
+                padding: 0;
+                padding-bottom: 1.5em;
+                .boton-box-text{
+                    height: auto;
+                    p{
+                        padding: 0;
+                        font-size: 1em;
+                    }
+                }
+                .box-btn{
+                    justify-content: left;
+                }
+            }
+        }
+        .box-ayuda{
+            margin-top: -2em;
+        }
+    }
+}
+.why-lyn{
+    .box-description{
+        p{
+            text-align: center;
+        }
+    }
+    .box-beneficios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 }
 
 // xl 1280px
