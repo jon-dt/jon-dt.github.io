@@ -1,6 +1,7 @@
 header{
-    /*position: fixed;
-    z-index: 100;*/
+    position: fixed;
+    z-index: 1;
+    background: $white;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -11,7 +12,7 @@ header{
             a{
                 img{
                     background: $white;
-                    width: 80px;
+                    width: 100px;
                 }
                 
             }
@@ -45,7 +46,7 @@ header{
                         li{
                             padding: .8em;
                             a{
-                                color: $principal-blue;
+                                color: $lyn-blue;
                                 font-weight: 600;
                                 font-size: 1em;
                             }

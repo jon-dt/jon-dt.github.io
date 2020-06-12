@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#002060" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/icofont.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Lyn AC</title>
 </head>
 <body>
     <header>
         <div class="box-logo">
-            <a href="#"><img src="./assets/images/logo.png" alt=""></a>
+            <a href="#"><img src="./assets/images/logos/lyn/logo_lyn_sm_header.png" alt=""></a>
         </div>
         <div class="box-menu">
             <div class="menu-hamburguer">
@@ -38,20 +43,44 @@
             </nav>
         </div>
         <div class="box-btn">
-            <a href="#" class="btn-donar">icn Quiero Donar</a>
+            <a href="#" class="btn-donar">
+                <i class="icofont-star"></i>
+                Quiero Donar
+            </a>
         </div>
     </header>
     <section class="welcome ">
+        <div class="box-images">
+            <img src="./assets/images/welcome_kids.svg" alt="">
+        </div>
+        <!--<div class="box-images ">
+            <div class="image image-burbujas">
+                <img 
+                    src="./assets/images/logos/burbujas/logo_burbujitas_xl.png"
+                    srcset="./assets/images/logos/burbujas/logo_burbujitas_s.png 140w,
+                        ./assets/images/logos/burbujas/logo_burbujitas_m.png 280w,
+                        ./assets/images/logos/burbujas/logo_burbujitas_l.png 600w,
+                        ./assets/images/logos/burbujas/logo_burbujitas_xl.png 1150w"
+                    sizes="(max-width: 568px) 140px,
+                        (max-width: 768px) 280px,
+                        (max-width: 1024px) 600px,
+                        1150px"
+                >
+            </div>
+            <div class="image">
+                <img srcset="./assets/images/logos/estrellita/logo_estrellitas_s.png 140w,
+                            ./assets/images/logos/estrellita/logo_estrellitas_m.png 280w,
+                            ./assets/images/logos/estrellita/logo_estrellitas_l.png 600w,
+                            ./assets/images/logos/estrellita/logo_estrellitas_xl.png 1150w"
+                    sizes=" (max-width: 568px) 140px,
+                            (max-width: 768px) 280px,
+                            (max-width: 1024px) 600px,
+                            1150px"
+                    src="./assets/images/logos/estrellita/logo_estrellitas_xl.png" alt="">
+            </div>
+        </div>-->
         <div class="box-title ">
             <h1>Somos LYN</h1>
-        </div>
-        <div class="box-images ">
-            <div class="image">
-                <img src="./assets/images/logo_burbujas.png" alt="">
-            </div>
-            <div class="image">
-                <img src="./assets/images/logo_estrellita.png" alt="">
-            </div>
         </div>
         <div class="box-text ">
             <div>
@@ -65,7 +94,12 @@
                         <p>Si eres una mami que necesita nuestra ayuda cont&aacute;ctanos.</p>
                     </div>
                     <div class="box-btn">
-                        <a href="#" class="btn-mama">icn Soy una mam&aacute;</a>
+                        <a href="#" class="btn-mama">
+                            <div>
+                                <i class="icofont-heart"></i>
+                                <span>Soy una mam&aacute;</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="boton">
@@ -73,18 +107,21 @@
                         <p>Si te gustaria ayudarnos a lograr nuestro objetivo.</p>
                     </div>
                     <div class="box-btn">
-                        <a href="#" class="btn-donar">icn Quiero Donar</a>
+                        <a href="#" class="btn-donar">
+                            <i class="icofont-star"></i>
+                            <span>Quiero Donar</span>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="box-ayuda">
-                <p>Con tu ayuda lo podemos lograr.</p>
+                <p><b>Con tu ayuda lo vamos lograr</b></p>
             </div>
         </div>
     </section>
     <section class="why-lyn ">
         <div class="box-title">
-            <h1>¿Porqué LYN?</h1>
+            <h2>¿Porqué LYN?</h2>
         </div>
         <div class="box-description">
             <p>
@@ -94,75 +131,75 @@
         <div class="box-beneficios">
             <div class="beneficio">
                 <div class="box-image">
-                    <img src="./assets/images/icon-api.svg" alt="">
+                    <i class="icofont-children-care"></i>
                 </div>
                 <div class="box-text">
                     <p>Atención, seguridad y cuidado.</p>
-                    <span>
+                    <!-- <span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aut vitae impedit nam 
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <div class="beneficio">
                 <div class="box-image">
-                    <img src="./assets/images/icon-api.svg" alt="">
+                    <i class="icofont-electron"></i>
                 </div>
                 <div class="box-text">
                     <p>Actividades para promover su desarrollo físico, mental y cognitivo.</p>
-                    <span>
+                    <!-- <span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aut vitae impedit nam 
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <div class="beneficio">
                 <div class="box-image">
-                    <img src="./assets/images/icon-api.svg" alt="">
+                    <i class="icofont-safety"></i>
                 </div>
                 <div class="box-text">
                     <p>Instalaciones adecuadas para su estancia.</p>
-                    <span>
+                    <!-- <span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aut vitae impedit nam 
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <div class="beneficio">
                 <div class="box-image">
-                    <img src="./assets/images/icon-api.svg" alt="">
+                    <i class="icofont-fruits"></i>
                 </div>
                 <div class="box-text">
                     <p>Una buena alimentación.</p>
-                    <span>
+                    <!-- <span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aut vitae impedit nam 
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <div class="beneficio">
                 <div class="box-image">
-                    <img src="./assets/images/icon-api.svg" alt="">
+                    <i class="icofont-license"></i>
                 </div>
                 <div class="box-text">
                     <p>Fortalecimiento de buenos habitos.</p>
-                    <span>
+                    <!-- <span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aut vitae impedit nam 
-                    </span>
+                    </span> -->
                 </div>
             </div>
             <div class="beneficio">
                 <div class="box-image">
-                    <img src="./assets/images/icon-api.svg" alt="">
+                    <i class="icofont-love"></i>
                 </div>
                 <div class="box-text">
                     <p>Mucho respeto, amor y cuidado.</p>
-                    <span>
+                    <!-- <span>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aut vitae impedit nam 
-                    </span>
+                    </span> -->
                 </div>
             </div>
         </div>
         <div class="box-contact">
             <div class="box-title">
-                <h1>Comunicate con nosotros</h1>
-                <p>estamos para servirte</p>
+                <h3>Comunicate con nosotros</h3>
+                <h4>estamos para servirte</h4>
             </div>  
             <div class="social-media">
                 <a href="#"><img src="./assets/icons/icon-whatsapp.svg" alt=""></a>
@@ -172,6 +209,9 @@
             </div>
         </div>
     </section>
+    <a href="#" class="btn-float-contact">
+        <i class="icofont-ui-call"></i>
+    </a>
     <script src="js/app.js"></script>
 </body>
 </html>

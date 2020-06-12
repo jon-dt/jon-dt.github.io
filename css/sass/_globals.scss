@@ -1,8 +1,12 @@
 /**** P R O J E C T   C O L O R S ******/
 $white: #fff;
-$principal-blue: rgb(0, 32, 96);
 $lyn-gray: #eee;
-$lyn-pink: #E24EC6;
+$lyn-pink: #FF05CC;
+$lyn-pink-s: #A504DB;
+$lyn-purple: #6711F2;
+$lyn-blue: #002060;
+$lyn-blue-s: #0804DB;
+
 /* G E N E R A L   C O L O R S */
 $blue: #007bff;
 $cyan: #17a2b8;
@@ -53,8 +57,8 @@ html{
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: $principal-blue;
+    font-family: 'Roboto', sans-serif;
+    color: $lyn-blue;
     text-align: center;
 }
 
@@ -87,42 +91,89 @@ nav ul li{
 }
 a{
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 img{
     pointer-events: none;
 }
-p{
-    line-height: 1.25em;
+i{
+    color: $white;
+    font-size: 1em;
 }
 
 /*******************************************/
 header, section{
-    padding: .5em 1em;
+    padding: 1em 1em;
 }
+
+h1, h2, h3, h4, h5{
+    font-family: 'Playfair Display', serif;
+    // font-family: 'Arvo', serif;
+}
+
+h1{
+    font-size: 2.9em;
+}
+h2{
+    font-size: 2.3em;
+}
+h3{
+    font-size: 1.8em;
+}
+p{
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
 
 .box-btn{
     display: flex;
     justify-content: center;
     padding: .5em 0;
     a{
-        padding: .7em 1em;
+        // padding: .7em 1em;
         border-radius: .5em;
         color: $white;
         font-weight: 700;
         width: 11em;
         height: 2.5em;
+        span{
+            color: $white;
+        }
         &.btn-donar{
-            background: $principal-blue;
+            // background: $lyn-blue;
+            background: linear-gradient(to right, $lyn-blue 0%, $lyn-blue-s 100%);
             &:hover{
                 background: $primary;
             }
         }
         &.btn-mama{
-            background: $lyn-pink;
+            // background: $lyn-pink;
+            background: linear-gradient(to right, $lyn-pink 0%, $lyn-pink-s 100%);
             &:hover{
                 background: $purple;
             }
         }
     }
 } 
+
+a{
+    &.btn-float-contact{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: linear-gradient(to right, $lyn-pink 20%, $lyn-purple 75%, $lyn-blue 100%);
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 99;
+        text-align: center;
+        padding: .5em;
+        box-shadow: 5px 5px 4px $gray
+        , 0 0 40px rgba(0, 0, 0, 0.1) 
+        inset;
+    }
+    i{
+        font-size: 2em;
+    }
+}
