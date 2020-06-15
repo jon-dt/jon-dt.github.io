@@ -1,37 +1,28 @@
 .welcome{
     padding-top: 2.5em;
-    /*.box-title{
-        h1{
-            font-size: 3em;
-        }
-    }*/
     .box-images{
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
-        // grid-gap: .5em;
+        overflow: hidden;
+        margin-top: 3em;
         .image{
             justify-content: center;
-            
             img{
                 margin: 1em 0;
-                width: 100%;
             }
         }
         .image-burbujas{
             padding: 1.6em 0;
         }
     }
+    .box-title{
+        padding: 1em 0;
+    }
     .box-text{
         padding: 0;
         p{
-            padding: .5em 0;
+            padding: 1em 0;
         }
         .botones{
             padding-bottom: 1em;
-            .boton{
-                padding: 1em;
-                
-            }
         }
     }
     .box-ayuda{
@@ -87,12 +78,9 @@
         }
     }
     .box-contact{
-        .social-media{
-            a{
-                padding: .5em .25em;
-                img{
-                    width: 3.12em;
-                }
+        .box-title{
+            p{
+                text-align: center;
             }
         }
     }

@@ -5,10 +5,9 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    div{
-        display: flex;
-        align-items: center;
-        &.box-logo{
+    display: flex;
+    align-items: center;
+    .box-logo{
             a{
                 img{
                     background: $white;
@@ -16,79 +15,78 @@ header{
                 }
                 
             }
-        }
-        &.box-menu{
-            .menu-hamburguer{
-                width: 1.5em;
-                height: 1.5em;
-                justify-content: center;
-                cursor: pointer;
-                .modal{
-                    display: none;
-                    position: fixed;
+    }
+    .box-menu{
+        .menu-hamburguer{
+            width: 1.5em;
+            height: 1.5em;
+            justify-content: center;
+            cursor: pointer;
+            .modal{
+                display: none;
+                position: fixed;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                margin-top: 2em;
+                background-color: rgba(0, 0, 0, .5);
+                .modal-menu{
+                    position: absolute;
                     left: 0;
                     right: 0;
-                    width: 100%;
-                    height: 100%;
-                    margin-top: 20em;
-                    background-color: rgba(0, 0, 0, .5);
-                    .modal-menu{
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        margin: auto;
-                        margin-top: 2em;
-                        width: 85%;
-                        background: $white;
-                        border-radius: .5em;
-                        padding: 1em 0;
-                        justify-content: center;
-                        li{
-                            padding: .8em;
-                            a{
-                                color: $lyn-blue;
-                                font-weight: 600;
-                                font-size: 1em;
-                            }
+                    margin: auto;
+                    margin-top: 2em;
+                    width: 85%;
+                    background: $white;
+                    border-radius: .5em;
+                    padding: 1em 0;
+                    justify-content: center;
+                    li{
+                        padding: .8em;
+                        a{
+                            color: $lyn-blue;
+                            font-weight: 600;
+                            font-size: 1em;
                         }
-                    } 
-                }
-                .menu-icon{
-                    display: none; 
-                    &:checked{ 
-                        & ~ .modal{
-                            display: block;
-                        }
-                        & ~ label{
-                            &:after{
-                                content: "";
-                                display: block;
-                                width: 1.5em;
-                                height: 1.5em;
-                                background: url("../../assets/icons/icon-close.svg") no-repeat;
-                            }
-                        }
-                    } 
-                }
-                label{
-                    user-select: none;
-                    &:after{
-                        cursor: pointer;
-                        content: "";
-                        display: block;
-                        width: 1.5em;
-                        height: 1em;
-                        background: url("../../assets/icons/icon-hamburger.svg") no-repeat;
-                        transition: .3s ease all;
                     }
-                }
+                } 
             }
-            nav.menu-nav{
-                display: none;
+            .menu-icon{
+                display: none; 
+                &:checked{ 
+                    & ~ .modal{
+                        display: block;
+                    }
+                    & ~ label{
+                        &:after{
+                            content: "";
+                            display: block;
+                            width: 1.5em;
+                            height: 1.5em;
+                            background: url("../../assets/icons/icon-close.svg") no-repeat;
+                        }
+                    }
+                } 
+            }
+            label{
+                user-select: none;
+                &:after{
+                    cursor: pointer;
+                    content: "";
+                    display: block;
+                    width: 1.5em;
+                    height: 1em;
+                    background: url("../../assets/icons/icon-hamburger.svg") no-repeat;
+                    transition: .3s ease all;
+                }
             }
         }
-        &.box-btn{
+        nav.menu-nav{
             display: none;
         }
+    }
+    .box-btn{
+        display: none;
     }
 }

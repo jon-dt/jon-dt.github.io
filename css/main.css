@@ -41,7 +41,7 @@ a { text-decoration: none; font-size: 1.2em; }
 
 img { pointer-events: none; }
 
-i { color: #fff; font-size: 1em; }
+i { color: #fff; font-size: 2em; vertical-align: middle; }
 
 /*******************************************/
 header, section { padding: 1em 1em; }
@@ -54,71 +54,91 @@ h2 { font-size: 2.3em; }
 
 h3 { font-size: 1.8em; }
 
-p { font-size: 1.3em; line-height: 1.4em; }
+p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 
+/*     Mom, donate button     */
 .box-btn { display: flex; justify-content: center; padding: .5em 0; }
 
-.box-btn a { border-radius: .5em; color: #fff; font-weight: 700; width: 11em; height: 2.5em; }
+.box-btn a { padding: .3em 0; border-radius: .5em; color: #fff; font-weight: 700; width: 11em; height: 2.5em; }
 
-.box-btn a span { color: #fff; }
+.box-btn a span { color: #fff; vertical-align: middle; font-size: 1.1em; }
 
-.box-btn a.btn-donar { background: linear-gradient(to right, #002060 0%, #0804DB 100%); }
+.box-btn a.btn-donar { background: linear-gradient(to right, #0804DB 0%, #002060 100%); }
 
-.box-btn a.btn-donar:hover { background: #007bff; }
+.box-btn a.btn-donar:hover { background: #0804DB; }
 
 .box-btn a.btn-mama { background: linear-gradient(to right, #FF05CC 0%, #A504DB 100%); }
 
-.box-btn a.btn-mama:hover { background: #6f42c1; }
+.box-btn a.btn-mama:hover { background: #FF05CC; }
 
-a.btn-float-contact { width: 55px; height: 55px; border-radius: 50%; background: linear-gradient(to right, #FF05CC 20%, #6711F2 75%, #002060 100%); position: fixed; bottom: 25px; right: 25px; z-index: 99; text-align: center; padding: .5em; box-shadow: 5px 5px 4px #6c757d, 0 0 40px rgba(0, 0, 0, 0.1) inset; }
+/*     Social networks, float button     */
+.box-float-btn { position: fixed; bottom: 25px; right: 25px; z-index: 99; }
 
-a i { font-size: 2em; }
+.box-float-btn #float-btn { display: none; }
 
-header { position: fixed; z-index: 1; background: #fff; width: 100%; display: flex; justify-content: space-between; }
+.box-float-btn #float-btn:checked ~ .box-float-contact a { margin-bottom: .3em; opacity: 1; visibility: visible; }
 
-header div { display: flex; align-items: center; }
+.box-float-btn #float-btn:checked ~ .float-btn-contact i.call { display: none; }
 
-header div.box-logo a img { background: #fff; width: 100px; }
+.box-float-btn #float-btn:checked ~ .float-btn-contact i.close { opacity: 1; visibility: visible; }
 
-header div.box-menu .menu-hamburguer { width: 1.5em; height: 1.5em; justify-content: center; cursor: pointer; }
+.box-float-btn .float-btn-contact, .box-float-btn .box-float-contact a { display: block; width: 50px; height: 50px; line-height: 50px; text-align: center; border-radius: 50%; background: #6711F2; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); transition: all 500ms ease; }
 
-header div.box-menu .menu-hamburguer .modal { display: none; position: fixed; left: 0; right: 0; width: 100%; height: 100%; margin-top: 20em; background-color: rgba(0, 0, 0, 0.5); }
+.box-float-btn .float-btn-contact { cursor: pointer; background: linear-gradient(to right, #FF05CC 20%, #6711F2 75%, #002060 100%); }
 
-header div.box-menu .menu-hamburguer .modal .modal-menu { position: absolute; left: 0; right: 0; margin: auto; margin-top: 2em; width: 85%; background: #fff; border-radius: .5em; padding: 1em 0; justify-content: center; }
+.box-float-btn .float-btn-contact i.close { opacity: 0; visibility: hidden; }
 
-header div.box-menu .menu-hamburguer .modal .modal-menu li { padding: .8em; }
+.box-float-btn .box-float-contact a { margin-bottom: -0.5em; opacity: 0; visibility: hidden; }
 
-header div.box-menu .menu-hamburguer .modal .modal-menu li a { color: #002060; font-weight: 600; font-size: 1em; }
+.box-float-btn .box-float-contact a:hover { background: #fff; }
 
-header div.box-menu .menu-hamburguer .menu-icon { display: none; }
+.box-float-btn .box-float-contact a:hover i { color: #6711F2; }
 
-header div.box-menu .menu-hamburguer .menu-icon:checked ~ .modal { display: block; }
+header { position: fixed; z-index: 1; background: #fff; width: 100%; display: flex; justify-content: space-between; display: flex; align-items: center; }
 
-header div.box-menu .menu-hamburguer .menu-icon:checked ~ label:after { content: ""; display: block; width: 1.5em; height: 1.5em; background: url("../../assets/icons/icon-close.svg") no-repeat; }
+header .box-logo a img { background: #fff; width: 100px; }
 
-header div.box-menu .menu-hamburguer label { user-select: none; }
+header .box-menu .menu-hamburguer { width: 1.5em; height: 1.5em; justify-content: center; cursor: pointer; }
 
-header div.box-menu .menu-hamburguer label:after { cursor: pointer; content: ""; display: block; width: 1.5em; height: 1em; background: url("../../assets/icons/icon-hamburger.svg") no-repeat; transition: .3s ease all; }
+header .box-menu .menu-hamburguer .modal { display: none; position: fixed; left: 0; right: 0; width: 100%; height: 100%; margin-top: 2em; background-color: rgba(0, 0, 0, 0.5); }
 
-header div.box-menu nav.menu-nav { display: none; }
+header .box-menu .menu-hamburguer .modal .modal-menu { position: absolute; left: 0; right: 0; margin: auto; margin-top: 2em; width: 85%; background: #fff; border-radius: .5em; padding: 1em 0; justify-content: center; }
 
-header div.box-btn { display: none; }
+header .box-menu .menu-hamburguer .modal .modal-menu li { padding: .8em; }
 
-.welcome { padding-top: 2.5em; /*.box-title{ h1{ font-size: 3em; } }*/ }
+header .box-menu .menu-hamburguer .modal .modal-menu li a { color: #002060; font-weight: 600; font-size: 1em; }
+
+header .box-menu .menu-hamburguer .menu-icon { display: none; }
+
+header .box-menu .menu-hamburguer .menu-icon:checked ~ .modal { display: block; }
+
+header .box-menu .menu-hamburguer .menu-icon:checked ~ label:after { content: ""; display: block; width: 1.5em; height: 1.5em; background: url("../../assets/icons/icon-close.svg") no-repeat; }
+
+header .box-menu .menu-hamburguer label { user-select: none; }
+
+header .box-menu .menu-hamburguer label:after { cursor: pointer; content: ""; display: block; width: 1.5em; height: 1em; background: url("../../assets/icons/icon-hamburger.svg") no-repeat; transition: .3s ease all; }
+
+header .box-menu nav.menu-nav { display: none; }
+
+header .box-btn { display: none; }
+
+.welcome { padding-top: 2.5em; }
+
+.welcome .box-images { overflow: hidden; margin-top: 3em; }
 
 .welcome .box-images .image { justify-content: center; }
 
-.welcome .box-images .image img { margin: 1em 0; width: 100%; }
+.welcome .box-images .image img { margin: 1em 0; }
 
 .welcome .box-images .image-burbujas { padding: 1.6em 0; }
 
+.welcome .box-title { padding: 1em 0; }
+
 .welcome .box-text { padding: 0; }
 
-.welcome .box-text p { padding: .5em 0; }
+.welcome .box-text p { padding: 1em 0; }
 
 .welcome .box-text .botones { padding-bottom: 1em; }
-
-.welcome .box-text .botones .boton { padding: 1em; }
 
 .welcome .box-ayuda p { padding-bottom: 1.5em; }
 
@@ -140,9 +160,7 @@ header div.box-btn { display: none; }
 
 .why-lyn .box-beneficios .beneficio .box-text span { font-size: .9em; color: #6c757d; padding: .25em 0; }
 
-.why-lyn .box-contact .social-media a { padding: .5em .25em; }
-
-.why-lyn .box-contact .social-media a img { width: 3.12em; }
+.why-lyn .box-contact .box-title p { text-align: center; }
 
 @media screen and (min-width: 35.5em) { header div.box-menu .menu-hamburguer { display: none; }
   header div.box-menu nav.menu-nav { display: flex; }

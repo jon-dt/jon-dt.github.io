@@ -20,7 +20,7 @@
             <div class="menu-hamburguer">
                 <input type="checkbox" class="menu-icon" name="menu-icon" id="menu-icon">
                 <label for="menu-icon"></label>
-                <div class="modal ">
+                <div class="modal">
                     <div class="modal-menu">
                         <nav>
                             <ul>
@@ -51,71 +51,46 @@
     </header>
     <section class="welcome ">
         <div class="box-images">
-            <img src="./assets/images/welcome_kids.svg" alt="">
+            <img 
+                src="./assets/images/girls_welcome_l.jpg"
+                srcset="./assets/images/girls_welcome_xs.jpg 300w,
+                    ./assets/images/girls_welcome_s.jpg 640w,
+                    ./assets/images/girls_welcome_m.jpg 1280w,
+                    ./assets/images/girls_welcome_l.jpg 1920w"
+                sizes="(max-width: 568px) 300px,
+                    (max-width: 768px) 640px,
+                    (max-width: 1024px) 1280px,
+                    1920px"
+            >
         </div>
-        <!--<div class="box-images ">
-            <div class="image image-burbujas">
-                <img 
-                    src="./assets/images/logos/burbujas/logo_burbujitas_xl.png"
-                    srcset="./assets/images/logos/burbujas/logo_burbujitas_s.png 140w,
-                        ./assets/images/logos/burbujas/logo_burbujitas_m.png 280w,
-                        ./assets/images/logos/burbujas/logo_burbujitas_l.png 600w,
-                        ./assets/images/logos/burbujas/logo_burbujitas_xl.png 1150w"
-                    sizes="(max-width: 568px) 140px,
-                        (max-width: 768px) 280px,
-                        (max-width: 1024px) 600px,
-                        1150px"
-                >
-            </div>
-            <div class="image">
-                <img srcset="./assets/images/logos/estrellita/logo_estrellitas_s.png 140w,
-                            ./assets/images/logos/estrellita/logo_estrellitas_m.png 280w,
-                            ./assets/images/logos/estrellita/logo_estrellitas_l.png 600w,
-                            ./assets/images/logos/estrellita/logo_estrellitas_xl.png 1150w"
-                    sizes=" (max-width: 568px) 140px,
-                            (max-width: 768px) 280px,
-                            (max-width: 1024px) 600px,
-                            1150px"
-                    src="./assets/images/logos/estrellita/logo_estrellitas_xl.png" alt="">
-            </div>
-        </div>-->
-        <div class="box-title ">
+        <div class="box-title">
             <h1>Somos LYN</h1>
         </div>
-        <div class="box-text ">
-            <div>
-                <p>
-                    Queremos ayudar a la mayor cantidad de niños con su educaci&oacute;n, alimentaci&oacute;n, atenci&oacute;n y cuidado. Hijos de madres de escasos recursos o en situaci&oacute;n vulnerable.
-                </p>
-            </div>
+        <div class="box-text">
+            <p>
+                Una asociaci&oacute;n dedicada al cuidado y educaci&oacute;n de ni&ntilde;os de escasos recursos o hijos de madres en situaci&oacute;n vulnerable.
+            </p>
             <div class="botones">
-                <div class="boton">
-                    <div class="boton-box-text">
-                        <p>Si eres una mami que necesita nuestra ayuda cont&aacute;ctanos.</p>
-                    </div>
-                    <div class="box-btn">
-                        <a href="#" class="btn-mama">
-                            <div>
-                                <i class="icofont-heart"></i>
-                                <span>Soy una mam&aacute;</span>
-                            </div>
-                        </a>
-                    </div>
+                <p>Si eres una mami con necesidad de que te ayudemos a cuidar a tu(s) niños, cont&aacute;ctanos.</p>
+                <div class="box-btn">
+                    <a href="#" class="btn-mama">
+                        <i class="icofont-heart"></i>
+                        <span>Soy una mam&aacute;</span>
+                    </a>
                 </div>
-                <div class="boton">
-                    <div class="boton-box-text">
-                        <p>Si te gustaria ayudarnos a lograr nuestro objetivo.</p>
-                    </div>
-                    <div class="box-btn">
-                        <a href="#" class="btn-donar">
-                            <i class="icofont-star"></i>
-                            <span>Quiero Donar</span>
-                        </a>
-                    </div>
+                <p>Si eres una persona o una instituci&oacute;n que le gustar&iacute;a ayudarnos, por favor da clic en el bot&oacute;n de abajo.</p>
+                <div class="box-btn">
+                    <a href="#" class="btn-donar">
+                        <i class="icofont-star"></i>
+                        <span>Quiero Donar</span>
+                    </a>
                 </div>
             </div>
             <div class="box-ayuda">
-                <p><b>Con tu ayuda lo vamos lograr</b></p>
+                <p>
+                    Queremos ayudar a la mayor cantidad de niños posibles y nos gustar&iacute;a que nos ayudar&aacute;s a lograrlo.
+                    <b>Con tu ayuda lo podemos lograr.</b>
+                </p>
             </div>
         </div>
     </section>
@@ -125,7 +100,7 @@
         </div>
         <div class="box-description">
             <p>
-                Todos los d&iacute;as nos esforzamos por generar espacios de calidad y en conjunto con nuestra experiencia nuestras ni&ntilde;as y ni&ntilde;os siempre tendr&aacute;n:
+                Todos los d&iacute;as en LYN nos esforzamos por generar espacios de calidad y en conjunto con nuestra experiencia nuestras ni&ntilde;as y ni&ntilde;os siempre tendr&aacute;n:
             </p>
         </div>
         <div class="box-beneficios">
@@ -199,19 +174,53 @@
         <div class="box-contact">
             <div class="box-title">
                 <h3>Comunicate con nosotros</h3>
-                <h4>estamos para servirte</h4>
+                <p>estamos para servirte</p>
             </div>  
-            <div class="social-media">
-                <a href="#"><img src="./assets/icons/icon-whatsapp.svg" alt=""></a>
-                <a href="#"><img src="./assets/icons/icon-messenger.svg" alt=""></a>
-                <a href="#"><img src="./assets/icons/icon-call.png" alt=""></a>
-                <a href="#"><img src="./assets/icons/icon-facebook.svg" alt=""></a>
-            </div>
+            <!--<div class="social-media">
+                <div class="border">
+                    <a href="#" class="border-g">
+                        <img src="./assets/icons/icon-whatsapp.svg" alt="whatsapp de lyn ac">
+                    </a>
+                </div>
+                <div class="border">
+                    <a href="#" class="border-g">
+                        <img src="./assets/icons/icon-messenger.svg" alt="messenger de lyn ac">
+                    </a>
+                </div>
+                <div class="border">
+                    <a href="#" class="border-g">
+                        <img src="./assets/icons/icon-call.png" alt="llamar a lyn ac">
+                    </a>
+                </div>
+                <div class="border">
+                    <a href="#" class="border-g">
+                        <img src="./assets/icons/icon-facebook.svg" alt="facebook de lyn ac">
+                    </a>
+                </div>
+            </div>-->
         </div>
     </section>
-    <a href="#" class="btn-float-contact">
-        <i class="icofont-ui-call"></i>
-    </a>
+    <div class="box-float-btn">
+        <input type="checkbox" name="float-btn" id="float-btn">
+        <div class="box-float-contact">
+            <a href="#">
+                <i class="icofont-facebook"></i>
+            </a>
+            <a href="#">
+                <i class="icofont-facebook-messenger"></i>
+            </a>
+            <a href="#">
+                <i class="icofont-whatsapp"></i>
+            </a>
+            <a href="#">
+                <i class="icofont-ui-call"></i>
+            </a>
+        </div>
+        <label for="float-btn" class="float-btn-contact">
+            <i class="icofont-ui-call call"></i>
+            <i class="icofont-close close"></i>
+        </label>
+    </div>
     <script src="js/app.js"></script>
 </body>
 </html>

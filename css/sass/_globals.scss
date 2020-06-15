@@ -98,7 +98,8 @@ img{
 }
 i{
     color: $white;
-    font-size: 1em;
+    font-size: 2em;
+    vertical-align: middle;
 }
 
 /*******************************************/
@@ -108,7 +109,6 @@ header, section{
 
 h1, h2, h3, h4, h5{
     font-family: 'Playfair Display', serif;
-    // font-family: 'Arvo', serif;
 }
 
 h1{
@@ -123,15 +123,16 @@ h3{
 p{
     font-size: 1.3em;
     line-height: 1.4em;
+    text-align: left;
 }
 
-
+/*     Mom, donate button     */
 .box-btn{
     display: flex;
     justify-content: center;
     padding: .5em 0;
     a{
-        // padding: .7em 1em;
+        padding: .3em 0;
         border-radius: .5em;
         color: $white;
         font-weight: 700;
@@ -139,41 +140,75 @@ p{
         height: 2.5em;
         span{
             color: $white;
+            vertical-align: middle;
+            font-size: 1.1em;
         }
         &.btn-donar{
-            // background: $lyn-blue;
-            background: linear-gradient(to right, $lyn-blue 0%, $lyn-blue-s 100%);
+            background: linear-gradient(to right, $lyn-blue-s 0%, $lyn-blue 100%);
             &:hover{
-                background: $primary;
+                background: $lyn-blue-s;
             }
         }
         &.btn-mama{
-            // background: $lyn-pink;
             background: linear-gradient(to right, $lyn-pink 0%, $lyn-pink-s 100%);
             &:hover{
-                background: $purple;
+                background: $lyn-pink;
             }
         }
     }
 } 
-
-a{
-    &.btn-float-contact{
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background: linear-gradient(to right, $lyn-pink 20%, $lyn-purple 75%, $lyn-blue 100%);
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        z-index: 99;
-        text-align: center;
-        padding: .5em;
-        box-shadow: 5px 5px 4px $gray
-        , 0 0 40px rgba(0, 0, 0, 0.1) 
-        inset;
+/*     Social networks, float button     */
+.box-float-btn{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99;
+    #float-btn{
+        display: none;
+        &:checked{
+            &~ .box-float-contact a{
+                margin-bottom: .3em;
+                opacity: 1;
+                visibility: visible;
+            }
+            &~ .float-btn-contact i.call{
+                display: none;
+            }
+            &~ .float-btn-contact i.close{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        
     }
-    i{
-        font-size: 2em;
+    .float-btn-contact, .box-float-contact a{
+        display: block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        background: $lyn-purple;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        transition: all 500ms ease;
+    }
+    .float-btn-contact{
+        cursor: pointer;
+        background: linear-gradient(to right, $lyn-pink 20%, $lyn-purple 75%, $lyn-blue 100%);
+        i.close{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    .box-float-contact a{
+        margin-bottom: -0.5em;
+        opacity: 0;
+        visibility: hidden;
+        &:hover{
+            background: $white;
+            i{
+                color: $lyn-purple;
+            }
+        }
     }
 }
