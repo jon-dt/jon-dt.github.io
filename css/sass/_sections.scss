@@ -1,13 +1,11 @@
 .welcome{
-    padding-top: 2.5em;
+    padding-top: 4em;
     .box-images{
         overflow: hidden;
-        margin-top: 3em;
-        .image{
-            justify-content: center;
-            img{
-                margin: 1em 0;
-            }
+        // margin-top: 3em;
+        img{
+            margin: 1em 0;
+            width: 95%;
         }
         .image-burbujas{
             padding: 1.6em 0;

@@ -72,7 +72,7 @@ p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 .box-btn a.btn-mama:hover { background: #FF05CC; }
 
 /*     Social networks, float button     */
-.box-float-btn { position: fixed; bottom: 25px; right: 25px; z-index: 99; }
+.box-float-btn { position: fixed; bottom: 25px; right: 25px; z-index: 9; }
 
 .box-float-btn #float-btn { display: none; }
 
@@ -94,13 +94,13 @@ p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 
 .box-float-btn .box-float-contact a:hover i { color: #6711F2; }
 
-header { position: fixed; z-index: 1; background: #fff; width: 100%; display: flex; justify-content: space-between; display: flex; align-items: center; }
+header { position: fixed; z-index: 10; background: #fff; width: 100%; height: 4em; display: flex; justify-content: space-between; display: flex; align-items: center; }
 
 header .box-logo a img { background: #fff; width: 100px; }
 
 header .box-menu .menu-hamburguer { width: 1.5em; height: 1.5em; justify-content: center; cursor: pointer; }
 
-header .box-menu .menu-hamburguer .modal { display: none; position: fixed; left: 0; right: 0; width: 100%; height: 100%; margin-top: 2em; background-color: rgba(0, 0, 0, 0.5); }
+header .box-menu .menu-hamburguer .modal { display: none; position: fixed; left: 0; right: 0; width: 100%; height: 100%; margin-top: 1.2em; background-color: rgba(0, 0, 0, 0.5); }
 
 header .box-menu .menu-hamburguer .modal .modal-menu { position: absolute; left: 0; right: 0; margin: auto; margin-top: 2em; width: 85%; background: #fff; border-radius: .5em; padding: 1em 0; justify-content: center; }
 
@@ -122,13 +122,11 @@ header .box-menu nav.menu-nav { display: none; }
 
 header .box-btn { display: none; }
 
-.welcome { padding-top: 2.5em; }
+.welcome { padding-top: 4em; }
 
-.welcome .box-images { overflow: hidden; margin-top: 3em; }
+.welcome .box-images { overflow: hidden; }
 
-.welcome .box-images .image { justify-content: center; }
-
-.welcome .box-images .image img { margin: 1em 0; }
+.welcome .box-images img { margin: 1em 0; width: 95%; }
 
 .welcome .box-images .image-burbujas { padding: 1.6em 0; }
 
@@ -168,9 +166,7 @@ header .box-btn { display: none; }
   header div.box-menu nav.menu-nav ul li a { margin: 0 .5em; }
   header div.box-menu nav.menu-nav ul li a:hover { padding-bottom: .5em; border-bottom: 2px solid #002060; }
   header div.box-btn { display: flex; }
-  .welcome .box-images { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1em; align-items: center; }
-  .welcome .box-text .botones { display: grid; grid-template-columns: 1fr 1fr; grid-gap: .5em; padding: 1em 0; }
-  .welcome .box-text .botones .boton .boton-box-text { padding: 0; height: 60px; } }
+  /*.welcome{ .box-images{ display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1em; align-items: center; } .box-text{ .botones{ display: grid; grid-template-columns: 1fr 1fr; grid-gap: .5em; padding: 1em 0; .boton{ .boton-box-text{ padding: 0; height: 60px; } } } } }*/ }
 
 @media screen and (min-width: 48em) { .why-lyn .box-beneficios { display: grid; grid-template-columns: 1fr 1fr; } }
 
