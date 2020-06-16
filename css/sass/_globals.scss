@@ -163,6 +163,11 @@ p{
     bottom: 25px;
     right: 25px;
     z-index: 9;
+    img{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
     #float-btn{
         display: none;
         &:checked{
@@ -188,12 +193,12 @@ p{
         line-height: 50px;
         text-align: center;
         border-radius: 50%;
-        background: $lyn-purple;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        background: none;
         transition: all 500ms ease;
     }
     .float-btn-contact{
         cursor: pointer;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
         background: linear-gradient(to right, $lyn-pink 20%, $lyn-purple 75%, $lyn-blue 100%);
         i.close{
             opacity: 0;

@@ -74,6 +74,8 @@ p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 /*     Social networks, float button     */
 .box-float-btn { position: fixed; bottom: 25px; right: 25px; z-index: 9; }
 
+.box-float-btn img { width: 50px; height: 50px; line-height: 50px; }
+
 .box-float-btn #float-btn { display: none; }
 
 .box-float-btn #float-btn:checked ~ .box-float-contact a { margin-bottom: .3em; opacity: 1; visibility: visible; }
@@ -82,9 +84,9 @@ p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 
 .box-float-btn #float-btn:checked ~ .float-btn-contact i.close { opacity: 1; visibility: visible; }
 
-.box-float-btn .float-btn-contact, .box-float-btn .box-float-contact a { display: block; width: 50px; height: 50px; line-height: 50px; text-align: center; border-radius: 50%; background: #6711F2; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); transition: all 500ms ease; }
+.box-float-btn .float-btn-contact, .box-float-btn .box-float-contact a { display: block; width: 50px; height: 50px; line-height: 50px; text-align: center; border-radius: 50%; background: none; transition: all 500ms ease; }
 
-.box-float-btn .float-btn-contact { cursor: pointer; background: linear-gradient(to right, #FF05CC 20%, #6711F2 75%, #002060 100%); }
+.box-float-btn .float-btn-contact { cursor: pointer; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); background: linear-gradient(to right, #FF05CC 20%, #6711F2 75%, #002060 100%); }
 
 .box-float-btn .float-btn-contact i.close { opacity: 0; visibility: hidden; }
 
