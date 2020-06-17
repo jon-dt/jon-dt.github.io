@@ -120,6 +120,9 @@ h2{
 h3{
     font-size: 1.8em;
 }
+h4{
+    font-size: 1.2em;
+}
 p{
     font-size: 1.3em;
     line-height: 1.4em;
@@ -159,20 +162,10 @@ p{
 } 
 /*     Social networks, float button     */
 .box-float-btn{
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 9;
-    img{
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-    }
     #float-btn{
         display: none;
         &:checked{
-            &~ .box-float-contact a{
-                margin-bottom: .3em;
+            &~ .modal-contact{
                 opacity: 1;
                 visibility: visible;
             }
@@ -186,18 +179,19 @@ p{
         }
         
     }
-    .float-btn-contact, .box-float-contact a{
+    .float-btn-contact{
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 10;
+        cursor: pointer;
         display: block;
         width: 50px;
         height: 50px;
         line-height: 50px;
         text-align: center;
         border-radius: 50%;
-        background: none;
-        transition: all 500ms ease;
-    }
-    .float-btn-contact{
-        cursor: pointer;
+        // transition: all 500ms ease;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
         background: linear-gradient(to right, $lyn-pink 20%, $lyn-purple 75%, $lyn-blue 100%);
         i.close{
@@ -205,14 +199,54 @@ p{
             visibility: hidden;
         }
     }
-    .box-float-contact a{
-        margin-bottom: -0.5em;
+    .modal-contact{
         opacity: 0;
         visibility: hidden;
-        &:hover{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .5);
+        // box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        .modal-content{
+            width: 90vw;
+            height: 50vh;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 5em;
             background: $white;
-            i{
-                color: $lyn-purple;
+            border-radius: .5em;
+            p.title{
+                display: block;
+                padding: .6em;
+                text-align: center;
+            }
+            .social-networks{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: .2em;
+                a{
+                    margin: .2em;
+                    background: rgba($lyn-gray, .7);
+                    width: 95%;
+                    border-radius: .5em;
+                    border: none;
+                    &:hover{
+                        background: rgba($lyn-pink, .2);
+                    }
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                    }
+                    p{
+                        font-size: .8em;
+                        text-align: center;
+                    }
+                }
             }
         }
     }

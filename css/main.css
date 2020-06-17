@@ -54,6 +54,8 @@ h2 { font-size: 2.3em; }
 
 h3 { font-size: 1.8em; }
 
+h4 { font-size: 1.2em; }
+
 p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 
 /*     Mom, donate button     */
@@ -72,29 +74,33 @@ p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 .box-btn a.btn-mama:hover { background: #FF05CC; }
 
 /*     Social networks, float button     */
-.box-float-btn { position: fixed; bottom: 25px; right: 25px; z-index: 9; }
-
-.box-float-btn img { width: 50px; height: 50px; line-height: 50px; }
-
 .box-float-btn #float-btn { display: none; }
 
-.box-float-btn #float-btn:checked ~ .box-float-contact a { margin-bottom: .3em; opacity: 1; visibility: visible; }
+.box-float-btn #float-btn:checked ~ .modal-contact { opacity: 1; visibility: visible; }
 
 .box-float-btn #float-btn:checked ~ .float-btn-contact i.call { display: none; }
 
 .box-float-btn #float-btn:checked ~ .float-btn-contact i.close { opacity: 1; visibility: visible; }
 
-.box-float-btn .float-btn-contact, .box-float-btn .box-float-contact a { display: block; width: 50px; height: 50px; line-height: 50px; text-align: center; border-radius: 50%; background: none; transition: all 500ms ease; }
-
-.box-float-btn .float-btn-contact { cursor: pointer; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); background: linear-gradient(to right, #FF05CC 20%, #6711F2 75%, #002060 100%); }
+.box-float-btn .float-btn-contact { position: fixed; bottom: 25px; right: 25px; z-index: 10; cursor: pointer; display: block; width: 50px; height: 50px; line-height: 50px; text-align: center; border-radius: 50%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); background: linear-gradient(to right, #FF05CC 20%, #6711F2 75%, #002060 100%); }
 
 .box-float-btn .float-btn-contact i.close { opacity: 0; visibility: hidden; }
 
-.box-float-btn .box-float-contact a { margin-bottom: -0.5em; opacity: 0; visibility: hidden; }
+.box-float-btn .modal-contact { opacity: 0; visibility: hidden; position: fixed; left: 0; right: 0; top: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5); }
 
-.box-float-btn .box-float-contact a:hover { background: #fff; }
+.box-float-btn .modal-contact .modal-content { width: 90vw; height: 50vh; left: 0; right: 0; margin: auto; margin-top: 5em; background: #fff; border-radius: .5em; }
 
-.box-float-btn .box-float-contact a:hover i { color: #6711F2; }
+.box-float-btn .modal-contact .modal-content p.title { display: block; padding: .6em; text-align: center; }
+
+.box-float-btn .modal-contact .modal-content .social-networks { display: grid; grid-template-columns: 1fr 1fr; grid-gap: .2em; }
+
+.box-float-btn .modal-contact .modal-content .social-networks a { margin: .2em; background: rgba(238, 238, 238, 0.7); width: 95%; border-radius: .5em; border: none; }
+
+.box-float-btn .modal-contact .modal-content .social-networks a:hover { background: rgba(255, 5, 204, 0.2); }
+
+.box-float-btn .modal-contact .modal-content .social-networks a img { width: 50px; height: 50px; line-height: 50px; }
+
+.box-float-btn .modal-contact .modal-content .social-networks a p { font-size: .8em; text-align: center; }
 
 header { position: fixed; z-index: 10; background: #fff; width: 100%; height: 4em; display: flex; justify-content: space-between; display: flex; align-items: center; }
 
