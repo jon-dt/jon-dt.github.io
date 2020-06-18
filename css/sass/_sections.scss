@@ -1,27 +1,17 @@
 .welcome{
     padding-top: 4em;
+    p{
+        padding: 2.5em 0 .5em;
+    }
     .box-images{
         overflow: hidden;
-        // margin-top: 3em;
         img{
             margin: 1em 0;
             width: 95%;
         }
-        .image-burbujas{
-            padding: 1.6em 0;
-        }
-    }
-    .box-title{
-        padding: 1em 0;
     }
     .box-text{
-        padding: 0;
-        p{
-            padding: 1em 0;
-        }
-        .botones{
-            padding-bottom: 1em;
-        }
+        padding-bottom: 1em;
     }
     .box-ayuda{
         p{

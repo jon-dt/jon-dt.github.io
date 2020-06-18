@@ -41,7 +41,7 @@ a { text-decoration: none; font-size: 1.2em; }
 
 img { pointer-events: none; }
 
-i { color: #fff; font-size: 2em; vertical-align: middle; }
+i { color: #fff; font-size: 1.5em; vertical-align: middle; }
 
 /*******************************************/
 header, section { padding: 1em 1em; }
@@ -61,7 +61,7 @@ p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 /*     Mom, donate button     */
 .box-btn { display: flex; justify-content: center; padding: .5em 0; }
 
-.box-btn a { padding: .3em 0; border-radius: .5em; color: #fff; font-weight: 700; width: 11em; height: 2.5em; }
+.box-btn a { padding: .5em .3em; border-radius: .5em; color: #fff; font-weight: 700; width: 10em; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); }
 
 .box-btn a span { color: #fff; vertical-align: middle; font-size: 1.1em; }
 
@@ -88,17 +88,19 @@ p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 
 .box-float-btn .modal-contact { opacity: 0; visibility: hidden; position: fixed; left: 0; right: 0; top: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5); }
 
-.box-float-btn .modal-contact .modal-content { width: 90vw; height: 50vh; left: 0; right: 0; margin: auto; margin-top: 5em; background: #fff; border-radius: .5em; }
+.box-float-btn .modal-contact .modal-content { width: 90vw; left: 0; right: 0; margin: auto; margin-top: 5em; padding: 0 .2em 1em; background: #fff; border-radius: .5em; }
 
-.box-float-btn .modal-contact .modal-content p.title { display: block; padding: .6em; text-align: center; }
+.box-float-btn .modal-contact .modal-content p.title { display: block; padding: .6em .3em; text-align: center; }
 
-.box-float-btn .modal-contact .modal-content .social-networks { display: grid; grid-template-columns: 1fr 1fr; grid-gap: .2em; }
+.box-float-btn .modal-contact .modal-content .social-networks { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1em; }
 
-.box-float-btn .modal-contact .modal-content .social-networks a { margin: .2em; background: rgba(238, 238, 238, 0.7); width: 95%; border-radius: .5em; border: none; }
+.box-float-btn .modal-contact .modal-content .social-networks a { margin: auto; background: rgba(238, 238, 238, 0.7); width: 100%; border-radius: .5em; border: none; text-align: center; padding: .5em; }
 
-.box-float-btn .modal-contact .modal-content .social-networks a:hover { background: rgba(255, 5, 204, 0.2); }
+.box-float-btn .modal-contact .modal-content .social-networks a:hover { background: rgba(0, 32, 96, 0.2); }
 
 .box-float-btn .modal-contact .modal-content .social-networks a img { width: 50px; height: 50px; line-height: 50px; }
+
+.box-float-btn .modal-contact .modal-content .social-networks a img.phone { width: 100px; height: 32px; }
 
 .box-float-btn .modal-contact .modal-content .social-networks a p { font-size: .8em; text-align: center; }
 
@@ -112,9 +114,13 @@ header .box-menu .menu-hamburguer .modal { display: none; position: fixed; left:
 
 header .box-menu .menu-hamburguer .modal .modal-menu { position: absolute; left: 0; right: 0; margin: auto; margin-top: 2em; width: 85%; background: #fff; border-radius: .5em; padding: 1em 0; justify-content: center; }
 
-header .box-menu .menu-hamburguer .modal .modal-menu li { padding: .8em; }
+header .box-menu .menu-hamburguer .modal .modal-menu ul li { padding: .8em 0 .8em 25%; text-align: left; }
 
-header .box-menu .menu-hamburguer .modal .modal-menu li a { color: #002060; font-weight: 600; font-size: 1em; }
+header .box-menu .menu-hamburguer .modal .modal-menu ul li a { color: #002060; font-weight: 600; font-size: 1em; }
+
+header .box-menu .menu-hamburguer .modal .modal-menu ul li a:hover { padding-bottom: .5em; border-bottom: 2px solid #002060; }
+
+header .box-menu .menu-hamburguer .modal .modal-menu ul li a i, header .box-menu .menu-hamburguer .modal .modal-menu ul li a span { font-size: 1em; color: #002060; vertical-align: middle; }
 
 header .box-menu .menu-hamburguer .menu-icon { display: none; }
 
@@ -128,23 +134,21 @@ header .box-menu .menu-hamburguer label:after { cursor: pointer; content: ""; di
 
 header .box-menu nav.menu-nav { display: none; }
 
+header .box-menu nav.menu-nav ul li:hover { padding-bottom: .5em; border-bottom: 2px solid #002060; }
+
+header .box-menu nav.menu-nav i, header .box-menu nav.menu-nav span { font-size: 1.5em; color: #002060; vertical-align: middle; }
+
 header .box-btn { display: none; }
 
 .welcome { padding-top: 4em; }
+
+.welcome p { padding: 2.5em 0 .5em; }
 
 .welcome .box-images { overflow: hidden; }
 
 .welcome .box-images img { margin: 1em 0; width: 95%; }
 
-.welcome .box-images .image-burbujas { padding: 1.6em 0; }
-
-.welcome .box-title { padding: 1em 0; }
-
-.welcome .box-text { padding: 0; }
-
-.welcome .box-text p { padding: 1em 0; }
-
-.welcome .box-text .botones { padding-bottom: 1em; }
+.welcome .box-text { padding-bottom: 1em; }
 
 .welcome .box-ayuda p { padding-bottom: 1.5em; }
 
@@ -172,29 +176,29 @@ header .box-btn { display: none; }
   header div.box-menu nav.menu-nav { display: flex; }
   header div.box-menu nav.menu-nav ul li { display: inline-block; }
   header div.box-menu nav.menu-nav ul li a { margin: 0 .5em; }
-  header div.box-menu nav.menu-nav ul li a:hover { padding-bottom: .5em; border-bottom: 2px solid #002060; }
+  header div.box-menu nav.menu-nav ul li a span { display: none; }
   header div.box-btn { display: flex; }
   /*.welcome{ .box-images{ display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1em; align-items: center; } .box-text{ .botones{ display: grid; grid-template-columns: 1fr 1fr; grid-gap: .5em; padding: 1em 0; .boton{ .boton-box-text{ padding: 0; height: 60px; } } } } }*/ }
 
-@media screen and (min-width: 48em) { .why-lyn .box-beneficios { display: grid; grid-template-columns: 1fr 1fr; } }
+@media screen and (min-width: 48em) { header div.box-menu nav.menu-nav ul li { margin: 1em .3em 0; }
+  header div.box-menu nav.menu-nav ul li a { margin: 0; }
+  header div.box-menu nav.menu-nav ul li a span { display: block; font-size: .7em; }
+  .welcome { padding-top: 5em; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 0 1em; }
+  .welcome .box-images { grid-row-start: 1; grid-row-end: 1; grid-column-start: 2; grid-column-end: 2; }
+  .welcome .box-title { grid-row-start: 1; grid-row-end: 1; grid-column-start: 1; grid-column-end: 1; padding-top: 1em; }
+  .welcome .box-ayuda { grid-row-start: 3; grid-row-end: 3; grid-column-start: 1; grid-column-end: 3; }
+  .welcome .box-ayuda p { text-align: center; line-height: 1.5em; }
+  .why-lyn .box-description p { text-align: center; }
+  .why-lyn .box-beneficios { display: grid; grid-template-columns: 1fr 1fr; }
+  .why-lyn .box-contact p { font-weight: 600; } }
 
-@media screen and (min-width: 64em) { .welcome { display: grid; grid-template-columns: 34.37em 1fr; }
-  .welcome .box-title { grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end: 1; }
-  .welcome .box-title h1 { font-size: 3em; }
-  .welcome .box-images { grid-column-start: 2; grid-column-end: 2; grid-row-start: 2; grid-row-end: 2; display: grid; }
-  .welcome .box-text { display: block; }
-  .welcome .box-text p { padding: 1em 0; text-align: left; font-size: 1.5em; line-height: 1.5em; }
-  .welcome .box-text .botones { display: block; padding: 1.6em 0 0 0; }
-  .welcome .box-text .botones .boton { padding: 0; padding-bottom: 1.5em; }
-  .welcome .box-text .botones .boton .boton-box-text { height: auto; }
-  .welcome .box-text .botones .boton .boton-box-text p { padding: 0; font-size: 1em; }
-  .welcome .box-text .botones .boton .box-btn { justify-content: left; }
-  .welcome .box-text .box-ayuda { margin-top: -2em; }
-  .why-lyn { height: 100vh; }
+@media screen and (min-width: 64em) { header div.box-menu nav.menu-nav ul li { margin: .5em .8em 0; }
+  header div.box-menu nav.menu-nav ul li a span { display: block; font-size: 1em; }
+  .welcome .box-title { padding: 15% 0; }
   .why-lyn .box-description p { text-align: center; }
   .why-lyn .box-beneficios { display: grid; grid-template-columns: 1fr 1fr 1fr; }
   .why-lyn .box-contact .social-media a { padding: 1em; }
-  .why-lyn .box-contact .social-media a img { width: 5.62em; } }
-
-@media screen and (min-width: 80em) { .welcome { height: calc(100vh - 6.25em); } }
+  .why-lyn .box-contact .social-media a img { width: 5.62em; }
+  .box-float-btn .modal-contact .modal-content .social-networks { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .box-float-btn .modal-contact .modal-content .social-networks a { height: 100px; } }
 /*# sourceMappingURL=main.css.map */
