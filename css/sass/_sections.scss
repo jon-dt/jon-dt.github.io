@@ -73,3 +73,107 @@
         }
     }
 }
+
+.gallery{
+    // padding-bottom: 3em;
+    .box-text{
+        padding: 1em 0;
+    }
+    .glider{
+        position: relative;
+        .glider-prev, .glider-next{
+            position: absolute;
+            background: rgba($white, .6);
+            border: none;
+            top: calc(60% - 38px);
+            cursor: pointer;
+            display: block;
+            width: 1.1em;
+            height: 1.1em;
+            line-height: 1em;
+            text-align: center;
+            &:hover{
+                background: $white;
+            }
+            i{
+                color: $lyn-blue;
+                font-size: 1em;
+            }
+        }
+        .glider-prev{
+            left: 10px;
+        }
+        .glider-next{
+            right: 10px;
+        }
+        .images{
+            overflow: hidden;
+            .image{
+                width: 100%;
+                padding: 1em 0;
+                margin: 0 .5em;
+                .box-image{
+                    background-image: linear-gradient(180deg, $lyn-pink 0%, $lyn-purple 51%, $lyn-blue 100%);
+                    position: relative;
+                    height: 200px;
+                    overflow: hidden;
+                    img{
+                        // overflow: hidden;
+                        width: 100%;
+                        height: 200px;
+                        padding: .2em;
+                    }
+                    .color-overlay{
+                        background-image: linear-gradient(180deg, $lyn-pink 0%, $lyn-purple 51%, $lyn-blue 100%);
+                        opacity: .3;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+                .box-description, .box-description-text{
+                    background: $lyn-gray;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid $lyn-blue;
+                    padding: .5em 1em;
+                    i{
+                        color: $lyn-pink-s;
+                        font-size: 1.5em;
+                        padding-right: .1em;
+                    }
+                    span{
+                        vertical-align: middle;
+                        font-size: 1.5em;
+                    }
+                }
+                .box-description-text{
+                    overflow: hidden;
+                    height: 61px;
+                    // padding: 1em;
+                    span{
+                        font-size: 1em;
+                        color: $gray-dark;
+                        text-align: left;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+    .glider-dot{
+        display: block;
+        width: 1.5em;
+        height: .5em;
+        border-radius: .5em;
+        background: $lyn-gray;
+        &.active{
+            background: $lyn-pink;
+        }
+        &:hover{
+            background: $lyn-pink-s;
+        }
+    }
+}

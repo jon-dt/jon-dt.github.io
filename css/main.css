@@ -58,6 +58,8 @@ h4 { font-size: 1.2em; }
 
 p { font-size: 1.3em; line-height: 1.4em; text-align: left; }
 
+span.text-pink { font-family: 'Playfair Display', serif; color: #FF05CC; }
+
 /*     Mom, donate button     */
 .box-btn { display: flex; justify-content: center; padding: .5em 0; }
 
@@ -172,13 +174,54 @@ header .box-btn { display: none; }
 
 .why-lyn .box-contact .box-title p { text-align: center; }
 
+.gallery .box-text { padding: 1em 0; }
+
+.gallery .glider { position: relative; }
+
+.gallery .glider .glider-prev, .gallery .glider .glider-next { position: absolute; background: rgba(255, 255, 255, 0.6); border: none; top: calc(60% - 38px); cursor: pointer; display: block; width: 1.1em; height: 1.1em; line-height: 1em; text-align: center; }
+
+.gallery .glider .glider-prev:hover, .gallery .glider .glider-next:hover { background: #fff; }
+
+.gallery .glider .glider-prev i, .gallery .glider .glider-next i { color: #002060; font-size: 1em; }
+
+.gallery .glider .glider-prev { left: 10px; }
+
+.gallery .glider .glider-next { right: 10px; }
+
+.gallery .glider .images { overflow: hidden; }
+
+.gallery .glider .images .image { width: 100%; padding: 1em 0; margin: 0 .5em; }
+
+.gallery .glider .images .image .box-image { background-image: linear-gradient(180deg, #FF05CC 0%, #6711F2 51%, #002060 100%); position: relative; height: 200px; overflow: hidden; }
+
+.gallery .glider .images .image .box-image img { width: 100%; height: 200px; padding: .2em; }
+
+.gallery .glider .images .image .box-image .color-overlay { background-image: linear-gradient(180deg, #FF05CC 0%, #6711F2 51%, #002060 100%); opacity: .3; width: 100%; height: 100%; position: absolute; left: 0; top: 0; }
+
+.gallery .glider .images .image .box-description, .gallery .glider .images .image .box-description-text { background: #eee; display: flex; justify-content: space-between; border-bottom: 1px solid #002060; padding: .5em 1em; }
+
+.gallery .glider .images .image .box-description i, .gallery .glider .images .image .box-description-text i { color: #A504DB; font-size: 1.5em; padding-right: .1em; }
+
+.gallery .glider .images .image .box-description span, .gallery .glider .images .image .box-description-text span { vertical-align: middle; font-size: 1.5em; }
+
+.gallery .glider .images .image .box-description-text { overflow: hidden; height: 61px; }
+
+.gallery .glider .images .image .box-description-text span { font-size: 1em; color: #343a40; text-align: left; line-height: 1.5em; }
+
+.gallery .glider-dot { display: block; width: 1.5em; height: .5em; border-radius: .5em; background: #eee; }
+
+.gallery .glider-dot.active { background: #FF05CC; }
+
+.gallery .glider-dot:hover { background: #A504DB; }
+
 @media screen and (min-width: 35.5em) { header div.box-menu .menu-hamburguer { display: none; }
   header div.box-menu nav.menu-nav { display: flex; }
   header div.box-menu nav.menu-nav ul li { display: inline-block; }
   header div.box-menu nav.menu-nav ul li a { margin: 0 .5em; }
   header div.box-menu nav.menu-nav ul li a span { display: none; }
   header div.box-btn { display: flex; }
-  /*.welcome{ .box-images{ display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1em; align-items: center; } .box-text{ .botones{ display: grid; grid-template-columns: 1fr 1fr; grid-gap: .5em; padding: 1em 0; .boton{ .boton-box-text{ padding: 0; height: 60px; } } } } }*/ }
+  .gallery .glider .images .image .box-image { height: 250px; }
+  .gallery .glider .images .image .box-image img { height: 250px; } }
 
 @media screen and (min-width: 48em) { header div.box-menu nav.menu-nav ul li { margin: 1em .3em 0; }
   header div.box-menu nav.menu-nav ul li a { margin: 0; }
@@ -201,4 +244,10 @@ header .box-btn { display: none; }
   .why-lyn .box-contact .social-media a img { width: 5.62em; }
   .box-float-btn .modal-contact .modal-content .social-networks { grid-template-columns: 1fr 1fr 1fr 1fr; }
   .box-float-btn .modal-contact .modal-content .social-networks a { height: 100px; } }
+
+@media screen and (min-width: 80em) { .gallery .glider .glider-prev { left: 35px; }
+  .gallery .glider .glider-next { right: 35px; }
+  .gallery .glider .images .image { margin: 0 2em; }
+  .gallery .glider .images .image .box-image { height: 350px; }
+  .gallery .glider .images .image .box-image img { height: 350px; } }
 /*# sourceMappingURL=main.css.map */

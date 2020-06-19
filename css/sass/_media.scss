@@ -25,28 +25,12 @@
             } 
         }
     }
-    /*.welcome{
-        .box-images{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 1em;
-            align-items: center;
+    .gallery .glider .images .image .box-image{
+        height: 250px;
+        img{
+            height: 250px;
         }
-        .box-text{
-            .botones{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: .5em;
-                padding: 1em 0;
-                .boton{
-                    .boton-box-text{
-                        padding: 0;
-                        height: 60px;
-                    }
-                }
-            }
-        }
-    }*/
+    }
 }
 
 // md 768px
@@ -152,5 +136,21 @@
 
 // xl 1280px
 @media screen and (min-width: 80em){
-
+    .gallery .glider{
+        .glider-prev{
+            left: 35px;
+        }
+        .glider-next{
+            right: 35px;
+        }
+        .images .image{
+            margin: 0 2em;
+            .box-image{
+               height: 350px;
+               img{
+                   height: 350px;
+               }
+           }
+        }
+    } 
 }
