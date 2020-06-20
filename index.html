@@ -6,7 +6,6 @@
     <meta name="theme-color" content="#002060" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" type="text/css" href="css/icofont.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -20,7 +19,10 @@
         <div class="box-menu">
             <div class="menu-hamburguer">
                 <input type="checkbox" class="menu-icon" name="menu-icon" id="menu-icon">
-                <label for="menu-icon"></label>
+                <label for="menu-icon" class="menu-icon-label">
+                    <i class="icofont-navigation-menu menu"></i>
+                    <i class="icofont-close close"></i>
+                </label>
                 <div class="modal">
                     <div class="modal-menu">
                         <nav>
@@ -209,39 +211,17 @@
                 <h3>Comunicate con nosotros</h3>
                 <p>estamos para servirte</p>
             </div>  
-            <!--<div class="social-media">
-                <div class="border">
-                    <a href="#" class="border-g">
-                        <img src="./assets/icons/icon-whatsapp.svg" alt="whatsapp de lyn ac">
-                    </a>
-                </div>
-                <div class="border">
-                    <a href="#" class="border-g">
-                        <img src="./assets/icons/icon-messenger.svg" alt="messenger de lyn ac">
-                    </a>
-                </div>
-                <div class="border">
-                    <a href="#" class="border-g">
-                        <img src="./assets/icons/icon-call.png" alt="llamar a lyn ac">
-                    </a>
-                </div>
-                <div class="border">
-                    <a href="#" class="border-g">
-                        <img src="./assets/icons/icon-facebook.svg" alt="facebook de lyn ac">
-                    </a>
-                </div>
-            </div>-->
         </div>
     </section>
     <section class="gallery">
-        <div class="box-text">
+        <div class="box-title">
             <h2>Nuestra <span class="text-pink">galer&iacute;a</span></h2>
         </div>
-        <div class="glider">
-            <button aria-label="Anterior" class="glider-prev">
+        <div class="box-glider">
+            <button aria-label="Anterior" class="glider-prev" id="glider-prev-gallery">
                 <i class="icofont-dotted-left"></i>
             </button>
-            <div class="images">
+            <div class="box-gallery">
                 <div class="image">
                     <div class="box-image">
                         <img src="./assets/images/gallery/gallery_2.jpeg"
@@ -259,11 +239,11 @@
                         </div>
                         <div class="place">
                             <i class="icofont-building-alt"></i>
-                            <span class="place">Estrellita</span>
+                            <span class="place">Estancia Estrellita</span>
                         </div>
                     </div>
                     <div class="box-description-text">
-                        <span>Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae est doloremque repellendus qui ipsam laudantium aspernatur temporibus quos placeat eius, nihil impedit fugiat vitae, possimus nisi perspiciatis aperiam dolorum.</span>
+                        <span>Una de nuestras maestras poniendo una actividad para el desarrollo mental</span>
                     </div>
                 </div>
                 <div class="image">
@@ -283,11 +263,11 @@
                         </div>
                         <div class="place">
                             <i class="icofont-building-alt"></i>
-                            <span class="place">Estrellita</span>
+                            <span class="place">Estancia Estrellita</span>
                         </div>
                     </div>
                     <div class="box-description-text">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nam alias perferendis</span>
+                        <span>La maestra Paty con uno de nuestros peque&ntilde;os al comenzar el d&iacute;a</span>
                     </div>
                 </div>
                 <div class="image">
@@ -311,7 +291,7 @@
                         </div>
                     </div>
                     <div class="box-description-text">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nam alias perferendis</span>
+                        <span>Un peque&ntilde;o taller de manualidades para decorar el hogar de los peque&ntilde;os</span>
                     </div>
                 </div>
                 <div class="image">
@@ -331,11 +311,11 @@
                         </div>
                         <div class="place">
                             <i class="icofont-building-alt"></i>
-                            <span class="place">Estrellita</span>
+                            <span class="place">Estancia Estrellita</span>
                         </div>
                     </div>
                     <div class="box-description-text">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nam alias perferendis</span>
+                        <span>Circuito de actividades para el desarrollo psicomotriz </span>
                     </div>
                 </div>
                 <div class="image">
@@ -355,17 +335,17 @@
                         </div>
                         <div class="place">
                             <i class="icofont-building-alt"></i>
-                            <span class="place">Estrellita</span>
+                            <span class="place">Estancia Estrellita</span>
                         </div>
                     </div>
                     <div class="box-description-text">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nam alias perferendis</span>
+                        <span>La maestra y los peque&ntilde;os en actividad de dibujo y colores</span>
                     </div>
                 </div>
                 <div class="image">
                     <div class="box-image">
                         <img src="./assets/images/gallery/gallery_23.jpeg"
-                            alt="maestra en actividad de dibujo"
+                            alt="maestra en la actividad conociendo a los animales"
                             srcset="./assets/images/gallery/gallery_23_s.jpg 568w,
                                     ./assets/images/gallery/gallery_23_m.jpg 768w,
                                     ./assets/images/gallery/gallery_23.jpeg 1024w"
@@ -379,23 +359,107 @@
                         </div>
                         <div class="place">
                             <i class="icofont-building-alt"></i>
-                            <span class="place">Estrellita</span>
+                            <span class="place">Estancia Estrellita</span>
                         </div>
                     </div>
                     <div class="box-description-text">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nam alias perferendis</span>
+                        <span>Maestra y peque&ntilde;os en la actividad conociendo a los animales</span>
                     </div>
                 </div>
             </div>
-            <button aria-label="Siguiente" class="glider-next">
+            <button aria-label="Siguiente" class="glider-next" id="glider-next-gallery">
                 <i class="icofont-dotted-right"></i>
             </button>
         </div>
-        <div role="tablist" class="glider-dots"></div>
-
+        <div role="tablist" class="glider-dots" id="glider-dots-gallery"></div>
     </section>
-
-
+    <section class="testimonials">
+        <div class="box-title"> 
+            <h2>Testimonios</h2>
+            <h4><span class="text-pink">Lo que las mamis opinan sobre LYN</span></h4>
+        </div>
+        <div class="box-glider">
+            <button aria-label="Anterior" class="glider-prev" id="glider-prev-testimonials">
+                <i class="icofont-dotted-left"></i>
+            </button>
+            <div class="box-testimonials">
+                <div class="testimonial">
+                    <div class="box-image"> 
+                        <img src="./assets/images/testimonials/testimonial_1.jpg" alt="">
+                    </div>
+                    <div class="box-text">
+                        <span class="name">Mam&aacute; Juanita</span>
+                        <span class="text">Escribir aqui unas palabras sobre lo que la mamá piensa sobre la asociación</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="box-image"> 
+                        <img src="./assets/images/testimonials/testimonial_2.jpg" alt="">
+                    </div>
+                    <div class="box-text">
+                        <span class="name">Mam&aacute; Mary</span>
+                        <span class="text">Escribir aqui unas palabras sobre lo que la mamá piensa sobre la asociación</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="box-image"> 
+                        <img src="./assets/images/testimonials/testimonial_3.jpg" alt="">
+                    </div>
+                    <div class="box-text">
+                        <span class="name">Mam&aacute; Jessi</span>
+                        <span class="text">Escribir aqui unas palabras sobre lo que la mamá piensa sobre la asociación</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="box-image"> 
+                        <img src="./assets/images/testimonials/testimonial_4.jpg" alt="">
+                    </div>
+                    <div class="box-text">
+                        <span class="name">Mam&aacute; Lilian</span>
+                        <span class="text">Escribir aqui unas palabras sobre lo que la mamá piensa sobre la asociación</span>
+                    </div>
+                </div>
+            </div>
+            <button aria-label="Siguiente" class="glider-next" id="glider-next-testimonials">
+                <i class="icofont-dotted-right"></i>
+            </button>
+        </div>
+        <div role="tablist" class="glider-dots" id="glider-dots-testimonials"></div>
+    </section>
+    <footer>
+        <div class="box-logo">
+            <a href="#"><img src="./assets/images/logos/lyn/logo_lyn_sm_footer.png"></a>
+        </div>
+        <div class="email">
+            <img src="./assets/images/contact_email_white.png" alt="">
+        </div>
+        <div class="social-networks">
+            <a href="https://fb.me/asociacionLYNAC">
+                <img src="./assets/icons/icon-facebook.svg">
+                <p>Asociaci&oacute;n LYN</p>
+            </a>
+            <a href="https://m.me/asociacionLYNAC">
+                <img src="./assets/icons/icon-messenger.svg">
+                <p>Asociaci&oacute;n LYN</p>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=524442257295">
+                <img src="./assets/icons/icon-whatsapp.svg">
+                <p>
+                    <img src="./assets/images/contact_phone.png" class="phone">
+                </p>   
+            </a>
+            <a href="tel:4442257295">
+                <img src="./assets/icons/icon-call.png">
+                <p>
+                    <img src="./assets/images/contact_phone.png" class="phone">
+                </p>
+            </a>
+        </div>
+        <div class="box-text">
+            <h3>Comunicate con nosotros</h3>
+            <p>estamos para servirte</p>
+        </div>
+    </footer>
     <div class="box-float-btn">
         <input type="checkbox" name="float-btn" id="float-btn">
         <label for="float-btn" class="float-btn-contact">

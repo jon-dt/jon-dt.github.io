@@ -1,0 +1,13 @@
+footer{
+    div.box-logo a img{
+        width: 200px;
+    } 
+    background: $lyn-blue;
+    .box-text{
+        padding: 1em 0;
+        h3, p{
+            color: $white;
+            text-align: center;
+        }
+    }
+}

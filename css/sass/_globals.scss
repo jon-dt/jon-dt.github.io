@@ -7,6 +7,7 @@ $lyn-purple: #6711F2;
 $lyn-blue: #002060;
 $lyn-blue-s: #0804DB;
 
+$lyn-border-pink: 2px solid $lyn-pink;
 $background-modal: rgba(0, 0, 0, .5);
 $shadow-button: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
@@ -86,6 +87,7 @@ body{
 .border-b{
     border: 1px solid $blue;
 }
+
 /*******************************************/
 nav ul li{
     list-style: none;
@@ -104,14 +106,14 @@ i{
     font-size: 1.5em;
     vertical-align: middle;
 }
-
 /*******************************************/
-header, section{
-    padding: 1em 1em;
+header, section, footer{
+    padding: 2.5em 1em;
 }
 
 h1, h2, h3, h4, h5{
     font-family: 'Playfair Display', serif;
+    // font-family: 'Barlow', sans-serif;
 }
 
 h1{
@@ -124,7 +126,7 @@ h3{
     font-size: 1.8em;
 }
 h4{
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 p{
     font-size: 1.3em;
@@ -133,9 +135,51 @@ p{
 }
 span.text-pink{
     font-family: 'Playfair Display', serif;
+    // font-family: 'Barlow', sans-serif;
     color: $lyn-pink;
 }
-
+div.box-logo a{
+    display: block;
+    width: auto;
+    height: auto;
+    img{
+        width: 100px;
+    }
+} 
+div.box-title{
+    padding: 1em 0;
+}
+div.social-networks{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    a{
+        margin: auto;
+        background: rgba($lyn-gray, .7);
+        width: 100%;
+        height: 100px;
+        border-radius: .5em;
+        border: none;
+        text-align: center;
+        padding: .5em;
+        &:hover{
+            background: rgba($lyn-blue, .2);
+        }
+        img{
+            &.phone{
+                width: 100px;
+                height: 32px;
+            }
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+        p{
+            font-size: .8em;
+            text-align: center;
+        }
+    }
+}
 /*     Mom, donate button     */
 .box-btn{
     display: flex;
@@ -180,8 +224,7 @@ span.text-pink{
                 display: none;
             }
             &~ .float-btn-contact i.close{
-                opacity: 1;
-                visibility: visible;
+                display: inline;
             }
         }
         
@@ -201,8 +244,7 @@ span.text-pink{
         box-shadow: $shadow-button;
         background: linear-gradient(to right, $lyn-pink 20%, $lyn-purple 75%, $lyn-blue 100%);
         i.close{
-            opacity: 0;
-            visibility: hidden;
+            display: none;
         }
     }
     .modal-contact{
@@ -229,37 +271,51 @@ span.text-pink{
                 padding: .6em .3em;
                 text-align: center;
             }
-            .social-networks{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 1em;
-                a{
-                    margin: auto;
-                    background: rgba($lyn-gray, .7);
-                    width: 100%;
-                    // height: 100px;
-                    border-radius: .5em;
-                    border: none;
-                    text-align: center;
-                    padding: .5em;
-                    &:hover{
-                        background: rgba($lyn-blue, .2);
-                    }
-                    img{
-                        &.phone{
-                            width: 100px;
-                            height: 32px;
-                        }
-                        width: 50px;
-                        height: 50px;
-                        line-height: 50px;
-                    }
-                    p{
-                        font-size: .8em;
-                        text-align: center;
-                    }
-                }
+            
+        }
+    }
+}
+/*     Glider Js Configuration     */
+div.box-glider{
+    position: relative;
+    .glider-prev, .glider-next{
+        position: absolute;
+        // background: rgba($lyn-blue, .6);
+        border: none;
+        top: 95%;
+        cursor: pointer;
+        display: block;
+        width: .8em;
+        height: 1.1em;
+        line-height: 1em;
+        text-align: center;
+        i{
+            color: $lyn-blue;
+            font-size: 1em;
+            &:hover{
+                color: $lyn-pink;
             }
+        }
+    }
+    .glider-prev{
+        left: 1px;
+    }
+    .glider-next{
+        right: 10px;
+    }
+}
+div.glider-dots{
+    .glider-dot{
+        display: block;
+        width: 1.5em;
+        height: .5em;
+        border-radius: .5em;
+        background: rgba($gray-dark, .5);
+        &.active{
+            background: $lyn-pink;
+        }
+        &:hover{
+            background: $lyn-pink-s;
         }
     }
 }

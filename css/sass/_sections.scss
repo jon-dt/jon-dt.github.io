@@ -29,7 +29,7 @@
     .box-description{
         p{
             padding: .5em 0;
-            color: $gray;
+            // color: $gray;
         }
     }
     .box-beneficios{
@@ -53,7 +53,7 @@
                 text-align: left;
                 p{
                     // font-size: 1.1em;
-                    font-weight: 600;
+                    font-weight: 500;
                     padding: .25em 0;
                     text-align: left;
                 }
@@ -75,105 +75,107 @@
 }
 
 .gallery{
-    // padding-bottom: 3em;
-    .box-text{
-        padding: 1em 0;
-    }
-    .glider{
-        position: relative;
-        .glider-prev, .glider-next{
-            position: absolute;
-            background: rgba($white, .6);
-            border: none;
-            top: calc(60% - 38px);
-            cursor: pointer;
-            display: block;
-            width: 1.1em;
-            height: 1.1em;
-            line-height: 1em;
-            text-align: center;
-            &:hover{
-                background: $white;
-            }
-            i{
-                color: $lyn-blue;
-                font-size: 1em;
-            }
-        }
-        .glider-prev{
-            left: 10px;
-        }
-        .glider-next{
-            right: 10px;
-        }
-        .images{
-            overflow: hidden;
-            .image{
-                width: 100%;
-                padding: 1em 0;
-                margin: 0 .5em;
-                .box-image{
-                    background-image: linear-gradient(180deg, $lyn-pink 0%, $lyn-purple 51%, $lyn-blue 100%);
-                    position: relative;
+    div.box-gallery{
+        overflow: hidden;
+        .image{
+            width: 100%;
+            padding: 1em 0;
+            margin: 0 .5em;
+            .box-image{
+                background-image: linear-gradient(180deg, $lyn-pink 0%, $lyn-purple 51%, $lyn-blue 100%);
+                position: relative;
+                height: 200px;
+                overflow: hidden;
+                img{
+                    // overflow: hidden;
+                    width: 100%;
                     height: 200px;
-                    overflow: hidden;
-                    img{
-                        // overflow: hidden;
-                        width: 100%;
-                        height: 200px;
-                        padding: .2em;
-                    }
-                    .color-overlay{
-                        background-image: linear-gradient(180deg, $lyn-pink 0%, $lyn-purple 51%, $lyn-blue 100%);
-                        opacity: .3;
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                    }
+                    padding: .2em;
                 }
-                .box-description, .box-description-text{
-                    background: $lyn-gray;
-                    display: flex;
-                    justify-content: space-between;
-                    border-bottom: 1px solid $lyn-blue;
-                    padding: .5em 1em;
-                    i{
-                        color: $lyn-pink-s;
-                        font-size: 1.5em;
-                        padding-right: .1em;
-                    }
-                    span{
-                        vertical-align: middle;
-                        font-size: 1.5em;
-                    }
+                .color-overlay{
+                    background-image: linear-gradient(180deg, $lyn-pink 0%, $lyn-purple 51%, $lyn-blue 100%);
+                    opacity: .3;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
                 }
-                .box-description-text{
-                    overflow: hidden;
-                    height: 61px;
-                    // padding: 1em;
-                    span{
-                        font-size: 1em;
-                        color: $gray-dark;
-                        text-align: left;
-                        line-height: 1.5em;
-                    }
+            }
+            .box-description, .box-description-text{
+                background: $lyn-gray;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid $lyn-blue;
+                padding: .5em 1em;
+                i{
+                    color: $lyn-pink-s;
+                    font-size: 1.5em;
+                    padding-right: .1em;
+                }
+                span{
+                    vertical-align: middle;
+                    // font-size: 1.5em;
+                }
+            }
+            .box-description-text{
+                overflow: hidden;
+                height: 61px;
+                // padding: 1em;
+                span{
+                    font-size: 1em;
+                    color: $gray-dark;
+                    text-align: left;
+                    line-height: 1.5em;
                 }
             }
         }
     }
-    .glider-dot{
-        display: block;
-        width: 1.5em;
-        height: .5em;
-        border-radius: .5em;
-        background: $lyn-gray;
-        &.active{
-            background: $lyn-pink;
-        }
-        &:hover{
-            background: $lyn-pink-s;
+}
+
+.testimonials{
+    background: $lyn-gray; 
+    div.box-testimonials{
+        padding: 1.5em 0;
+        overflow: hidden;
+        .testimonial{
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            margin-bottom: 2em;
+            height: 100px;
+            overflow: hidden;
+            .box-image{
+                display: block;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    overflow: hidden;
+                }
+            }
+            .box-text{
+                border-left: $lyn-border-pink;
+                padding: .5em 0 0 .5em;
+                overflow: hidden;
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                span{
+                    display: block;
+                    text-align: left;
+                    &.name{
+                        padding-bottom: .5em;
+                        font-size: 1.3em;
+                    }
+                    &.text{
+                        color: $gray-dark;
+                        font-size: 1em;
+                        line-height: 1.3em;
+                    }
+                }
+            }
         }
     }
 }
