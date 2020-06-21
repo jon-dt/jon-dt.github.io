@@ -16,6 +16,7 @@ header{
             justify-content: center;
             cursor: pointer;
             .modal{
+                // @include scale-out-ver-bottom;
                 display: none;
                 position: fixed;
                 left: 0;
@@ -62,6 +63,7 @@ header{
                 &:checked{ 
                     & ~ .modal{
                         display: block;
+                        @include scale-in-ver-bottom;
                     }
                     & ~ label{
                         i.menu{
@@ -71,6 +73,13 @@ header{
                             display: inline;
                         }
                     }
+                    /*& ~ article {
+                        z-index: -1; 
+                        transform: scale(0.7) translate(250px, -750px);
+                        border-radius: 0.25em;
+                        user-select: none;
+                        pointer-events: none;
+                      }*/
                 } 
             }
             label{

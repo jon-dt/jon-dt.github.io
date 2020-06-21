@@ -67,7 +67,7 @@ html{
 }
 
 body{
-    background: $white;
+    background: $lyn-blue;
 }
 
 /* M Y  -  O W N S */
@@ -211,12 +211,15 @@ div.social-networks{
         }
     }
 } 
+
+
 /*     Social networks, float button     */
 .box-float-btn{
     #float-btn{
         display: none;
         &:checked{
             &~ .modal-contact{
+                @include scale-in-ver-bottom;
                 opacity: 1;
                 visibility: visible;
             }
@@ -230,6 +233,7 @@ div.social-networks{
         
     }
     .float-btn-contact{
+        // opacity: 0;
         position: fixed;
         bottom: 25px;
         right: 25px;
@@ -243,11 +247,25 @@ div.social-networks{
         border-radius: 50%;
         box-shadow: $shadow-button;
         background: linear-gradient(to right, $lyn-pink 20%, $lyn-purple 75%, $lyn-blue 100%);
+        &::after{
+            animation: pulsate 1s ease-out;
+            animation-iteration-count: infinite; 
+            content: "";
+            border: 3px solid $white;
+            border-radius: 50%;
+            display: block;
+            height: 55px;
+            width: 55px;
+            position: relative;
+            top: -3.2em;
+            left: -.2em;
+        }
         i.close{
             display: none;
         }
     }
     .modal-contact{
+        // @include scale-out-ver-bottom;
         opacity: 0;
         visibility: hidden;
         position: fixed;
@@ -262,7 +280,7 @@ div.social-networks{
             left: 0;
             right: 0;
             margin: auto;
-            margin-top: 5em;
+            margin-top: 7em;
             padding: 0 .2em 1em;
             background: $white;
             border-radius: .5em;
@@ -319,3 +337,8 @@ div.glider-dots{
         }
     }
 }
+
+
+
+
+
